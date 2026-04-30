@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SR12 Herbal Skincare — Official Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#b81a1a;
+  --green-dark:#7a0f0f;
+  --green-mid:#d43232;
+  --green-light:#e85555;
+  --green-pale:#fdeaea;
+  --green-mist:#fff2f2;
+  --gold:#b8882a;
+  --gold-light:#d4a843;
+  --cream:#fefcf8;
+  --warm:#fdf6f6;
+  --white:#ffffff;
+  --dark:#1f0e0e;
+  --text:#3b2424;
+  --muted:#8a6b6b;
+  --border:rgba(184,26,26,0.1);
+  --shadow:0 4px 24px rgba(122,15,15,0.1);
+  --shadow-lg:0 16px 48px rgba(122,15,15,0.15);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+
+/* ── ANNOUNCEMENT BAR ── */
+.announce{
+  background:var(--green-dark);color:white;
+  text-align:center;padding:10px 20px;
+  font-size:.82rem;letter-spacing:.3px;
+}
+.announce strong{color:var(--gold-light)}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(254,252,248,0.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:0 5%;
+}
+.nav-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  height:68px;gap:20px;
+}
+.nav-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.7rem;font-weight:700;
+  color:var(--green-dark);letter-spacing:1px;
+  text-decoration:none;
+}
+.nav-logo em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{
+  text-decoration:none;color:var(--text);
+  font-size:.88rem;font-weight:500;
+  transition:color .2s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;
+  width:0;height:2px;background:var(--green-light);
+  transition:width .25s;border-radius:2px;
+}
+.nav-links a:hover{color:var(--green)}
+.nav-links a:hover::after{width:100%}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.btn-nav-wa{
+  background:var(--green);color:white;
+  padding:10px 22px;border-radius:8px;
+  font-size:.85rem;font-weight:600;
+  text-decoration:none;
+  transition:background .2s,transform .2s;
+  display:flex;align-items:center;gap:6px;
+}
+.btn-nav-wa:hover{background:var(--green-mid);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+
+/* ── HERO ── */
+#hero{
+  background:
+    radial-gradient(ellipse 100% 80% at 100% 50%, rgba(61,179,125,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 100% at 0% 100%, rgba(184,136,42,0.08) 0%, transparent 50%),
+    var(--warm);
+  padding:80px 5% 70px;
+  overflow:hidden;position:relative;
+}
+.hero-leaf{
+  position:absolute;opacity:.06;font-size:300px;
+  right:-60px;top:-60px;pointer-events:none;
+  animation:spin 30s linear infinite;
+}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.hero-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--green-pale);border:1px solid rgba(26,107,74,0.2);
+  color:var(--green);padding:6px 14px;border-radius:50px;
+  font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.8px;
+  margin-bottom:18px;
+}
+.hero-tag .dot{width:6px;height:6px;background:var(--green-light);border-radius:50%;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.6rem,4.5vw,4rem);
+  font-weight:700;line-height:1.15;
+  color:var(--dark);margin-bottom:18px;
+}
+.hero-title span{color:var(--green)}
+.hero-title em{color:var(--gold);font-style:normal}
+.hero-desc{
+  color:var(--muted);font-size:1rem;line-height:1.75;
+  margin-bottom:32px;max-width:460px;
+}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.btn-hero-main{
+  background:var(--green);color:white;
+  padding:15px 30px;border-radius:10px;
+  font-weight:700;font-size:.95rem;
+  text-decoration:none;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:0 6px 20px rgba(26,107,74,0.35);
+  transition:all .25s;
+}
+.btn-hero-main:hover{background:var(--green-mid);transform:translateY(-2px);box-shadow:0 10px 28px rgba(26,107,74,0.4)}
+.btn-hero-sec{
+  background:white;color:var(--green);
+  border:1.5px solid rgba(26,107,74,0.3);
+  padding:15px 30px;border-radius:10px;
+  font-weight:600;font-size:.95rem;
+  text-decoration:none;
+  display:flex;align-items:center;gap:8px;
+  transition:all .25s;
+}
+.btn-hero-sec:hover{border-color:var(--green);background:var(--green-pale);transform:translateY(-2px)}
+.hero-trust{display:flex;gap:28px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted)}
+.trust-item .ti{
+  width:32px;height:32px;border-radius:8px;
+  background:var(--green-pale);
+  display:flex;align-items:center;justify-content:center;font-size:.9rem;
+}
+
+/* Hero visual */
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-main-card{
+  background:white;border-radius:24px;
+  padding:36px 32px;text-align:center;
+  box-shadow:var(--shadow-lg);
+  border:1px solid var(--border);
+  position:relative;z-index:2;
+  animation:floatY 5s ease-in-out infinite;
+}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.product-img-wrap{
+  width:180px;height:180px;border-radius:50%;
+  background:linear-gradient(135deg,var(--green-pale),var(--green-mist));
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;font-size:5rem;
+  border:3px solid rgba(26,107,74,0.12);
+}
+.card-product-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;font-weight:700;color:var(--dark);margin-bottom:4px;
+}
+.card-product-sub{font-size:.82rem;color:var(--muted);margin-bottom:14px}
+.card-badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.badge{
+  background:var(--green-pale);color:var(--green);
+  padding:4px 12px;border-radius:50px;
+  font-size:.72rem;font-weight:600;border:1px solid rgba(26,107,74,0.15);
+}
+.badge.gold{background:#fdf5e6;color:var(--gold);border-color:rgba(184,136,42,0.2)}
+.hero-floating-card{
+  position:absolute;background:white;border-radius:14px;
+  padding:14px 18px;box-shadow:var(--shadow);
+  border:1px solid var(--border);
+  display:flex;align-items:center;gap:10px;
+}
+.hfc-left{font-size:1.5rem}
+.hfc-num{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--dark);line-height:1}
+.hfc-label{font-size:.7rem;color:var(--muted)}
+.fc1{top:10%;right:-10%;animation:floatY 4s ease-in-out infinite .5s}
+.fc2{bottom:15%;left:-10%;animation:floatY 4s ease-in-out infinite 1s}
+
+/* ── TRUST BAR ── */
+.trust-bar{
+  background:var(--green-dark);
+  padding:20px 5%;
+}
+.trust-bar-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;
+}
+.tb-item{
+  display:flex;align-items:center;gap:10px;
+  color:rgba(255,255,255,0.85);font-size:.85rem;
+}
+.tb-icon{font-size:1.3rem}
+.tb-item strong{color:white;font-weight:600}
+
+/* ── SECTIONS ── */
+section{padding:80px 5%}
+.section-wrap{max-width:1200px;margin:0 auto}
+.sec-header{margin-bottom:50px}
+.sec-label{
+  display:inline-block;
+  background:var(--green-pale);color:var(--green);
+  border:1px solid rgba(26,107,74,0.2);
+  padding:5px 14px;border-radius:50px;
+  font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;
+  margin-bottom:10px;
+}
+.sec-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.8rem,3vw,2.6rem);
+  font-weight:700;color:var(--dark);
+  line-height:1.2;margin-bottom:10px;
+}
+.sec-desc{color:var(--muted);font-size:.97rem;line-height:1.7;max-width:540px}
+.center{text-align:center}
+.center .sec-desc{margin:0 auto}
+
+/* ── PRODUCTS ── */
+#products{background:var(--cream)}
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:24px;
+}
+.product-card{
+  background:white;border-radius:20px;
+  border:1px solid var(--border);
+  overflow:hidden;
+  transition:all .3s;
+  cursor:pointer;
+}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(26,107,74,0.2)}
+.pc-img{
+  height:200px;
+  background:linear-gradient(135deg,var(--green-pale),var(--green-mist));
+  display:flex;align-items:center;justify-content:center;
+  font-size:4rem;position:relative;
+  overflow:hidden;
+}
+.pc-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,transparent 60%,rgba(26,107,74,0.05));
+}
+.pc-best{
+  position:absolute;top:12px;left:12px;
+  background:var(--gold);color:white;
+  padding:3px 10px;border-radius:50px;
+  font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+  z-index:1;
+}
+.pc-body{padding:20px}
+.pc-cat{font-size:.72rem;color:var(--green);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.pc-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--dark);margin-bottom:6px;line-height:1.3}
+.pc-desc{font-size:.82rem;color:var(--muted);line-height:1.5;margin-bottom:16px}
+.pc-footer{display:flex;align-items:center;justify-content:space-between}
+.pc-price{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--green-dark)}
+.pc-price small{font-family:'Plus Jakarta Sans',sans-serif;font-size:.7rem;color:var(--muted);font-weight:400;display:block}
+.btn-order-sm{
+  background:var(--green);color:white;
+  padding:9px 16px;border-radius:8px;
+  font-size:.78rem;font-weight:600;
+  text-decoration:none;
+  transition:background .2s,transform .2s;
+  white-space:nowrap;
+}
+.btn-order-sm:hover{background:var(--green-mid);transform:scale(1.03)}
+
+/* ── WHY ── */
+#why{background:var(--warm)}
+.why-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+}
+.why-visual{
+  background:linear-gradient(145deg,var(--green),var(--green-mid));
+  border-radius:28px;padding:50px 40px;color:white;
+  position:relative;overflow:hidden;
+  box-shadow:var(--shadow-lg);
+}
+.why-visual::before{
+  content:'🌿';font-size:250px;opacity:.06;
+  position:absolute;right:-50px;bottom:-60px;
+  line-height:1;pointer-events:none;
+}
+.why-visual h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;margin-bottom:16px;font-weight:700;
+}
+.why-visual p{opacity:.85;line-height:1.7;margin-bottom:28px}
+.why-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ws{
+  background:rgba(255,255,255,0.12);border-radius:14px;
+  padding:18px;text-align:center;
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.15);
+}
+.ws-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold-light)}
+.ws-label{font-size:.78rem;opacity:.75;margin-top:4px}
+.why-features{display:flex;flex-direction:column;gap:20px}
+.wf{
+  display:flex;gap:16px;align-items:flex-start;
+  background:white;border-radius:16px;padding:22px;
+  border:1px solid var(--border);
+  transition:all .25s;
+}
+.wf:hover{transform:translateX(8px);box-shadow:var(--shadow);border-color:rgba(26,107,74,0.2)}
+.wf-icon{
+  width:48px;height:48px;border-radius:12px;
+  background:linear-gradient(135deg,var(--green),var(--green-light));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;flex-shrink:0;
+  box-shadow:0 4px 12px rgba(26,107,74,0.25);
+}
+.wf-title{font-weight:700;color:var(--dark);margin-bottom:4px}
+.wf-desc{font-size:.85rem;color:var(--muted);line-height:1.5}
+
+/* ── HOW TO ORDER ── */
+#order{background:var(--cream)}
+.order-steps{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  margin-bottom:50px;
+}
+.os{
+  background:white;border-radius:20px;padding:28px 22px;
+  border:1px solid var(--border);text-align:center;
+  position:relative;transition:all .3s;
+}
+.os:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.os-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--green);color:white;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 14px;
+  box-shadow:0 4px 14px rgba(26,107,74,0.3);
+}
+.os-arrow{
+  position:absolute;top:40px;right:-14px;
+  font-size:1.2rem;color:var(--muted);z-index:2;
+}
+.os:last-child .os-arrow{display:none}
+.os-icon{font-size:2rem;margin-bottom:10px}
+.os-title{font-weight:700;color:var(--dark);margin-bottom:6px}
+.os-desc{font-size:.82rem;color:var(--muted);line-height:1.5}
+
+.order-ctas{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  max-width:800px;margin:0 auto;
+}
+.order-platform{
+  background:white;border-radius:20px;padding:32px;
+  border:1.5px solid var(--border);
+  text-align:center;
+  transition:all .3s;
+}
+.order-platform:hover{border-color:var(--green-light);transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.op-icon{font-size:2.8rem;margin-bottom:12px}
+.op-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--dark);margin-bottom:6px}
+.op-desc{font-size:.82rem;color:var(--muted);line-height:1.5;margin-bottom:22px}
+
+/* ── EKSPEDISI ── */
+#ekspedisi{background:var(--warm)}
+.eks-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:14px;
+  margin-top:40px;
+}
+.ek{
+  background:white;border-radius:14px;
+  padding:20px 14px;text-align:center;
+  border:1px solid var(--border);
+  transition:all .25s;
+}
+.ek:hover{border-color:var(--green-light);transform:translateY(-4px);box-shadow:var(--shadow);background:var(--green-mist)}
+.ek-ico{font-size:1.8rem;margin-bottom:8px;display:block}
+.ek-name{font-weight:700;font-size:.85rem;color:var(--dark);margin-bottom:3px}
+.ek-type{font-size:.72rem;color:var(--muted);line-height:1.4}
+.eks-note{
+  text-align:center;margin-top:24px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  color:var(--green);font-weight:600;font-size:.88rem;
+  background:var(--green-pale);border:1px solid rgba(26,107,74,0.15);
+  border-radius:12px;padding:12px 24px;
+  max-width:480px;margin:24px auto 0;
+}
+
+/* ── TESTIMONI ── */
+#testimoni{background:var(--cream)}
+.testi-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+  margin-top:40px;
+}
+.tc{
+  background:white;border-radius:20px;padding:28px;
+  border:1px solid var(--border);
+  transition:all .3s;
+  position:relative;overflow:hidden;
+}
+.tc::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--green),var(--green-light));
+  opacity:0;transition:opacity .3s;
+}
+.tc:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.tc:hover::before{opacity:1}
+.tc-stars{color:#f5a623;font-size:.95rem;margin-bottom:12px}
+.tc-text{font-size:.9rem;color:var(--text);line-height:1.7;margin-bottom:20px;font-style:italic}
+.tc-user{display:flex;align-items:center;gap:12px}
+.tc-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--green),var(--green-light));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;flex-shrink:0;
+}
+.tc-name{font-weight:700;font-size:.9rem;color:var(--dark)}
+.tc-loc{font-size:.75rem;color:var(--muted)}
+.tc-prod{
+  display:inline-block;margin-top:4px;
+  background:var(--green-pale);color:var(--green);
+  padding:2px 8px;border-radius:4px;font-size:.68rem;font-weight:600;
+}
+
+/* ── CTA SECTION ── */
+#cta{
+  background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 50%,var(--green-mid) 100%);
+  padding:80px 5%;
+  position:relative;overflow:hidden;
+}
+#cta::before{
+  content:'🌿';font-size:400px;opacity:.04;
+  position:absolute;right:-100px;top:-100px;
+  pointer-events:none;line-height:1;
+}
+.cta-inner{
+  max-width:700px;margin:0 auto;text-align:center;
+  position:relative;z-index:1;
+}
+.cta-inner h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:700;color:white;margin-bottom:14px;
+}
+.cta-inner p{color:rgba(255,255,255,0.8);font-size:1rem;line-height:1.7;margin-bottom:32px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-cta-wa{
+  background:#25D366;color:white;
+  padding:16px 34px;border-radius:10px;
+  font-weight:700;font-size:1rem;
+  text-decoration:none;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:0 6px 20px rgba(37,211,102,0.35);
+  transition:all .25s;
+}
+.btn-cta-wa:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 10px 28px rgba(37,211,102,0.5)}
+.btn-cta-ghost{
+  background:rgba(255,255,255,0.15);
+  border:1.5px solid rgba(255,255,255,0.35);
+  color:white;
+  padding:16px 34px;border-radius:10px;
+  font-weight:600;font-size:1rem;
+  text-decoration:none;
+  display:flex;align-items:center;gap:8px;
+  backdrop-filter:blur(8px);
+  transition:all .25s;
+}
+.btn-cta-ghost:hover{background:rgba(255,255,255,0.25);transform:translateY(-2px)}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);padding:60px 5% 28px}
+.footer-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:2.5fr 1fr 1fr 1.5fr;gap:48px;
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.f-brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:700;color:white;margin-bottom:12px;
+}
+.f-brand em{color:var(--gold-light);font-style:normal}
+.f-desc{color:rgba(255,255,255,0.55);font-size:.87rem;line-height:1.7;margin-bottom:22px}
+.f-socials{display:flex;gap:10px}
+.fsoc{
+  width:38px;height:38px;border-radius:10px;
+  background:rgba(255,255,255,0.07);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;text-decoration:none;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:all .2s;
+}
+.fsoc:hover{background:var(--green-mid);border-color:var(--green-mid);transform:translateY(-2px)}
+.f-col h4{color:white;font-size:.88rem;font-weight:700;margin-bottom:18px;letter-spacing:.3px}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.f-col ul li a{
+  color:rgba(255,255,255,0.5);font-size:.84rem;
+  text-decoration:none;transition:color .2s;
+}
+.f-col ul li a:hover{color:var(--gold-light)}
+.f-contact li{display:flex;align-items:flex-start;gap:8px;color:rgba(255,255,255,0.55);font-size:.84rem;line-height:1.5;margin-bottom:10px}
+.footer-bottom{
+  max-width:1200px;margin:24px auto 0;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:.78rem;color:rgba(255,255,255,0.35);
+}
+.footer-bottom a{color:rgba(255,255,255,0.45);text-decoration:none}
+.footer-bottom a:hover{color:var(--gold-light)}
+
+/* ── FLOATING WA ── */
+.wa-fab{
+  position:fixed;bottom:28px;right:28px;z-index:999;
+  background:#25D366;color:white;
+  width:58px;height:58px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;text-decoration:none;
+  box-shadow:0 6px 24px rgba(37,211,102,0.45);
+  animation:waPulse 2.8s infinite;
+  transition:transform .2s;
+}
+.wa-fab:hover{transform:scale(1.12)}
+.wa-fab-tip{
+  position:absolute;right:70px;
+  background:var(--dark);color:white;
+  font-size:.78rem;padding:7px 13px;border-radius:8px;
+  white-space:nowrap;pointer-events:none;font-family:'Plus Jakarta Sans',sans-serif;
+  opacity:0;transform:translateX(10px);
+  transition:all .25s;
+}
+.wa-fab:hover .wa-fab-tip{opacity:1;transform:translateX(0)}
+@keyframes waPulse{
+  0%,100%{box-shadow:0 6px 24px rgba(37,211,102,0.45)}
+  50%{box-shadow:0 6px 36px rgba(37,211,102,0.7),0 0 0 12px rgba(37,211,102,0.08)}
+}
+
+/* ── SCROLL REVEAL ── */
+.sr{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.sr.up{opacity:1;transform:translateY(0)}
+.sr-d1{transition-delay:.1s}.sr-d2{transition-delay:.2s}.sr-d3{transition-delay:.3s}.sr-d4{transition-delay:.4s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;text-align:center;gap:40px}
+  .hero-visual{order:-1}
+  .hero-ctas,.hero-trust{justify-content:center}
+  .hero-desc{margin:0 auto 32px}
+  .why-grid{grid-template-columns:1fr}
+  .order-steps{grid-template-columns:repeat(2,1fr)}
+  .os-arrow{display:none}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .fc1,.fc2{display:none}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .trust-bar-inner{justify-content:flex-start}
+  .hero-ctas{flex-direction:column;align-items:center}
+  .order-steps{grid-template-columns:1fr}
+  .order-ctas{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+  .cta-btns{flex-direction:column;align-items:center}
+}
+@media(max-width:480px){
+  .eks-grid{grid-template-columns:repeat(2,1fr)}
+  .product-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCE -->
+<div class="announce">
+  🎉 <strong>PROMO SPESIAL!</strong> Gratis Ongkir untuk pembelian pertama · COD tersedia · Garansi 100% Original BPOM ✅
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">SR<em>12</em> <span style="font-size:.8rem;font-weight:400;color:var(--muted);font-family:'Plus Jakarta Sans'">Herbal Skincare</span></a>
+    <ul class="nav-links">
+      <li><a href="#products">Produk</a></li>
+      <li><a href="#why">Keunggulan</a></li>
+      <li><a href="#order">Pemesanan</a></li>
+      <li><a href="#ekspedisi">Pengiriman</a></li>
+      <li><a href="#testimoni">Testimoni</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20SR12" class="btn-nav-wa" target="_blank">
+        💬 Pesan WA
+      </a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-leaf">🌿</div>
+  <div class="hero-inner">
+    <div class="hero-content sr">
+      <div class="hero-tag">
+        <span class="dot"></span> Official Reseller SR12
+      </div>
+      <h1 class="hero-title">
+        Perawatan Kulit <em>Herbal</em><br>
+        Alami & <span>Terpercaya</span>
+      </h1>
+      <p class="hero-desc">
+        SR12 Herbal Skincare — produk kecantikan asli Indonesia, terdaftar BPOM, bebas mercury & hydroquinon. Lebih dari 40 produk untuk merawat kulit wajah, tubuh, dan kesehatanmu.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20SR12" class="btn-hero-main" target="_blank">
+          🛒 Pesan Sekarang
+        </a>
+        <a href="#products" class="btn-hero-sec">
+          📦 Lihat Produk
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><div class="ti">✅</div> Resmi BPOM</div>
+        <div class="trust-item"><div class="ti">🌿</div> 100% Herbal</div>
+        <div class="trust-item"><div class="ti">🚚</div> Kirim Se-Indonesia</div>
+        <div class="trust-item"><div class="ti">🔒</div> Garansi Original</div>
+      </div>
+    </div>
+    <div class="hero-visual sr sr-d2">
+      <div class="hero-main-card">
+        <div class="product-img-wrap">🌿</div>
+        <div class="card-product-name">SR12</div>
+        <div class="card-product-sub">Herbal Skincare Series</div>
+        <div class="card-badges">
+          <span class="badge">BPOM Certified</span>
+          <span class="badge gold">Halal MUI</span>
+          <span class="badge">100% Alami</span>
+        </div>
+      </div>
+      <div class="hero-floating-card fc1">
+        <div class="hfc-left">⭐</div>
+        <div><div class="hfc-num">4.9/5</div><div class="hfc-label">5.000+ Review</div></div>
+      </div>
+      <div class="hero-floating-card fc2">
+        <div class="hfc-left">👥</div>
+        <div><div class="hfc-num">10K+</div><div class="hfc-label">Pelanggan Puas</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="tb-item"><span class="tb-icon">🏆</span><span>Berdiri sejak <strong>2015</strong></span></div>
+    <div class="tb-item"><span class="tb-icon">🧪</span><span>Uji Lab <strong>Sucofindo</strong></span></div>
+    <div class="tb-item"><span class="tb-icon">📋</span><span>Terdaftar <strong>BPOM RI</strong></span></div>
+    <div class="tb-item"><span class="tb-icon">🌿</span><span><strong>40+</strong> Varian Produk</span></div>
+    <div class="tb-item"><span class="tb-icon">🚚</span><span>COD & <strong>All Ekspedisi</strong></span></div>
+  </div>
+</div>
+
+<!-- PRODUK -->
+<section id="products">
+  <div class="section-wrap">
+    <div class="sec-header center sr">
+      <span class="sec-label">Katalog Produk</span>
+      <h2 class="sec-title">Produk Unggulan SR12</h2>
+      <p class="sec-desc">Rangkaian perawatan lengkap untuk kulit wajah & tubuh, diformulasikan dari bahan herbal alami pilihan.</p>
+    </div>
+    <div class="product-grid sr">
+      <div class="product-card">
+        <div class="pc-img"><span class="pc-best">Best Seller</span>🧴</div>
+        <div class="pc-body">
+          <div class="pc-cat">Perawatan Wajah</div>
+          <div class="pc-name">Whitening Cream SR12</div>
+          <div class="pc-desc">Mencerahkan, melembapkan & melindungi kulit dari paparan sinar UV setiap hari.</div>
+          <div class="pc-footer">
+            <div class="pc-price">Rp 94.500<small>Harga Reseller</small></div>
+            <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20Whitening%20Cream%20SR12" class="btn-order-sm" target="_blank">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="pc-img">🫧</div>
+        <div class="pc-body">
+          <div class="pc-cat">Sabun Wajah</div>
+          <div class="pc-name">Facial Wash Honey Extract</div>
+          <div class="pc-desc">Membersihkan, menyegarkan & melembapkan kulit wajah dengan kebaikan madu alami.</div>
+          <div class="pc-footer">
+            <div class="pc-price">Rp 52.500<small>Harga Reseller</small></div>
+            <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20Facial%20Wash%20SR12" class="btn-order-sm" target="_blank">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="pc-img"><span class="pc-best">New</span>💧</div>
+        <div class="pc-body">
+          <div class="pc-cat">Serum Wajah</div>
+          <div class="pc-name">DNA Salmon Serum SR12</div>
+          <div class="pc-desc">Menjaga kelembaban, menyamarkan garis halus, kulit lembab & kenyal sepanjang hari.</div>
+          <div class="pc-footer">
+            <div class="pc-price">Rp 91.500<small>Harga Reseller</small></div>
+            <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20Serum%20SR12" class="btn-order-sm" target="_blank">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="pc-img">🫙</div>
+        <div class="pc-body">
+          <div class="pc-cat">Perawatan Jerawat</div>
+          <div class="pc-name">Acne Care Cream SR12</div>
+          <div class="pc-desc">Melembabkan, merawat kulit berjerawat & membersihkan kotoran dan minyak pada wajah.</div>
+          <div class="pc-footer">
+            <div class="pc-price">Rp 100.000<small>Harga Reseller</small></div>
+            <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20Acne%20Care%20SR12" class="btn-order-sm" target="_blank">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="pc-img"><span class="pc-best">Laris</span>🧼</div>
+        <div class="pc-body">
+          <div class="pc-cat">Sabun Badan</div>
+          <div class="pc-name">Sabun Bulus SR12</div>
+          <div class="pc-desc">Turtle oil + Vitamin A, C & E untuk mengencangkan, mencerahkan & mengurangi stretch mark.</div>
+          <div class="pc-footer">
+            <div class="pc-price">Rp 31.500<small>Harga Reseller</small></div>
+            <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20Sabun%20Bulus%20SR12" class="btn-order-sm" target="_blank">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="pc-img">💄</div>
+        <div class="pc-body">
+          <div class="pc-cat">Makeup</div>
+          <div class="pc-name">Lip Matte Cream SR12</div>
+          <div class="pc-desc">Warna cerah tahan lama, tidak kering di bibir, tersedia berbagai pilihan warna cantik.</div>
+          <div class="pc-footer">
+            <div class="pc-price">Rp 58.000<small>Harga Reseller</small></div>
+            <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20Lip%20Matte%20SR12" class="btn-order-sm" target="_blank">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="pc-img">🌾</div>
+        <div class="pc-body">
+          <div class="pc-cat">Herbal</div>
+          <div class="pc-name">Minyak VCO SR12</div>
+          <div class="pc-desc">Virgin Coconut Oil murni untuk kekebalan tubuh, melembapkan kulit & anti bakteri alami.</div>
+          <div class="pc-footer">
+            <div class="pc-price">Rp 55.000<small>Harga Reseller</small></div>
+            <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20VCO%20SR12" class="btn-order-sm" target="_blank">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="pc-img">✨</div>
+        <div class="pc-body">
+          <div class="pc-cat">Serum Badan</div>
+          <div class="pc-name">Body Serum Brightening SR12</div>
+          <div class="pc-desc">Mencerahkan dan melembapkan kulit tubuh dengan formula ringan cepat meresap.</div>
+          <div class="pc-footer">
+            <div class="pc-price">Rp 55.000<small>Harga Reseller</small></div>
+            <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20Body%20Serum%20SR12" class="btn-order-sm" target="_blank">Pesan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20lihat%20katalog%20lengkap%20SR12" class="btn-hero-sec" target="_blank" style="display:inline-flex">
+        📋 Lihat Semua Produk (40+ Varian)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SR12 -->
+<section id="why">
+  <div class="section-wrap">
+    <div class="why-grid">
+      <div class="why-visual sr">
+        <h3>Mengapa Pilih SR12?</h3>
+        <p>SR12 Herbal Skincare telah dipercaya jutaan orang Indonesia sejak 2015. Formula hasil riset saintis bersertifikasi, teruji bebas mercury & hydroquinon.</p>
+        <div class="why-stats">
+          <div class="ws"><div class="ws-num">2015</div><div class="ws-label">Tahun Berdiri</div></div>
+          <div class="ws"><div class="ws-num">40+</div><div class="ws-label">Varian Produk</div></div>
+          <div class="ws"><div class="ws-num">10K+</div><div class="ws-label">Pelanggan</div></div>
+          <div class="ws"><div class="ws-num">4.9★</div><div class="ws-label">Rating</div></div>
+        </div>
+      </div>
+      <div class="why-features sr sr-d2">
+        <div class="wf">
+          <div class="wf-icon">🌿</div>
+          <div><div class="wf-title">Formula 100% Herbal Alami</div><div class="wf-desc">Diformulasikan dari bahan herbal alami pilihan, cocok untuk semua jenis kulit termasuk kulit sensitif.</div></div>
+        </div>
+        <div class="wf">
+          <div class="wf-icon">✅</div>
+          <div><div class="wf-title">Terdaftar BPOM & Halal MUI</div><div class="wf-desc">Semua produk SR12 telah mendapat izin BPOM RI dan sertifikat Halal dari MUI. Aman & terjamin.</div></div>
+        </div>
+        <div class="wf">
+          <div class="wf-icon">🧪</div>
+          <div><div class="wf-title">Uji Lab Sucofindo</div><div class="wf-desc">Bebas mercury & hydroquinon, teruji klinis di laboratorium Sucofindo yang terakreditasi nasional.</div></div>
+        </div>
+        <div class="wf">
+          <div class="wf-icon">💰</div>
+          <div><div class="wf-title">Harga Terjangkau Semua Kalangan</div><div class="wf-desc">Kualitas premium dengan harga yang ramah di kantong. Mulai Rp 26.500 untuk produk pilihan.</div></div>
+        </div>
+        <div class="wf">
+          <div class="wf-icon">🤝</div>
+          <div><div class="wf-title">Peluang Jadi Reseller</div><div class="wf-desc">Bergabung jadi mitra SR12 dan dapatkan keuntungan 15%–50%. Support & bimbingan gratis untuk semua mitra.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARA ORDER -->
+<section id="order">
+  <div class="section-wrap">
+    <div class="sec-header center sr">
+      <span class="sec-label">Cara Pemesanan</span>
+      <h2 class="sec-title">Mudah & Cepat, 4 Langkah</h2>
+      <p class="sec-desc">Proses pemesanan simpel, pengiriman cepat ke seluruh Indonesia. Kami siap melayani kamu!</p>
+    </div>
+    <div class="order-steps sr">
+      <div class="os">
+        <div class="os-num">1</div>
+        <div class="os-icon">🛍️</div>
+        <div class="os-title">Pilih Produk</div>
+        <div class="os-desc">Lihat katalog produk dan pilih yang sesuai kebutuhanmu</div>
+        <span class="os-arrow">›</span>
+      </div>
+      <div class="os">
+        <div class="os-num">2</div>
+        <div class="os-icon">💬</div>
+        <div class="os-title">Hubungi Kami</div>
+        <div class="os-desc">Chat via WhatsApp atau beli langsung di marketplace</div>
+        <span class="os-arrow">›</span>
+      </div>
+      <div class="os">
+        <div class="os-num">3</div>
+        <div class="os-icon">💳</div>
+        <div class="os-title">Konfirmasi & Bayar</div>
+        <div class="os-desc">Transfer / COD / bayar via marketplace sesuai pilihan</div>
+        <span class="os-arrow">›</span>
+      </div>
+      <div class="os">
+        <div class="os-num">4</div>
+        <div class="os-icon">📦</div>
+        <div class="os-title">Pesanan Dikirim</div>
+        <div class="os-desc">Produk dikemas rapi & dikirim ke alamatmu hari itu juga</div>
+      </div>
+    </div>
+    <div class="order-ctas sr sr-d2">
+      <div class="order-platform">
+        <div class="op-icon">💬</div>
+        <div class="op-name">Pesan via WhatsApp</div>
+        <div class="op-desc">Konsultasi gratis, respon cepat, bisa minta rekomendasi produk sesuai jenis kulitmu.</div>
+        <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20SR12" class="btn-hero-main" target="_blank" style="justify-content:center">
+          💬 Chat Sekarang
+        </a>
+      </div>
+      <div class="order-platform">
+        <div class="op-icon">🛒</div>
+        <div class="op-name">Pesan via Marketplace</div>
+        <div class="op-desc">Belanja aman & mudah di Shopee atau Tokopedia. Nikmati promo dan cashback eksklusif.</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="#" class="btn-hero-main" style="justify-content:center;background:#f57224;box-shadow:0 6px 20px rgba(245,114,36,.3)">🛒 Shopee</a>
+          <a href="#" class="btn-hero-main" style="justify-content:center;background:#03ac0e;box-shadow:0 6px 20px rgba(3,172,14,.3)">🛒 Tokopedia</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EKSPEDISI -->
+<section id="ekspedisi">
+  <div class="section-wrap">
+    <div class="sec-header center sr">
+      <span class="sec-label">Pengiriman</span>
+      <h2 class="sec-title">Semua Ekspedisi Indonesia</h2>
+      <p class="sec-desc">Kami bekerja sama dengan seluruh jasa pengiriman terpercaya. Kirim ke mana saja, sampai dengan selamat!</p>
+    </div>
+    <div class="eks-grid sr">
+      <div class="ek"><span class="ek-ico">📦</span><div class="ek-name">JNE</div><div class="ek-type">REG · YES · OKE</div></div>
+      <div class="ek"><span class="ek-ico">🚚</span><div class="ek-name">J&T Express</div><div class="ek-type">Express · EZ</div></div>
+      <div class="ek"><span class="ek-ico">⚡</span><div class="ek-name">SiCepat</div><div class="ek-type">REG · BEST · HALU</div></div>
+      <div class="ek"><span class="ek-ico">🏃</span><div class="ek-name">AnterAja</div><div class="ek-type">Reguler · Same Day</div></div>
+      <div class="ek"><span class="ek-ico">🏛️</span><div class="ek-name">Pos Indonesia</div><div class="ek-type">Kilat · Biasa</div></div>
+      <div class="ek"><span class="ek-ico">🥷</span><div class="ek-name">Ninja Xpress</div><div class="ek-type">Standard · Saver</div></div>
+      <div class="ek"><span class="ek-ico">🦁</span><div class="ek-name">Lion Parcel</div><div class="ek-type">REGPACK · ONEPACK</div></div>
+      <div class="ek"><span class="ek-ico">📬</span><div class="ek-name">TIKI</div><div class="ek-type">REG · ONS · ECO</div></div>
+      <div class="ek"><span class="ek-ico">🚀</span><div class="ek-name">SAP Express</div><div class="ek-type">Reguler · Express</div></div>
+      <div class="ek"><span class="ek-ico">🆔</span><div class="ek-name">ID Express</div><div class="ek-type">Reguler · Next Day</div></div>
+      <div class="ek"><span class="ek-ico">🌊</span><div class="ek-name">Wahana</div><div class="ek-type">Reguler · Express</div></div>
+      <div class="ek"><span class="ek-ico">⚡</span><div class="ek-name">GoSend / Grab</div><div class="ek-type">Same Day · Instant</div></div>
+    </div>
+    <div class="eks-note sr">📍 Ongkos kirim dihitung otomatis berdasarkan lokasi & berat paket saat checkout</div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section id="testimoni">
+  <div class="section-wrap">
+    <div class="sec-header center sr">
+      <span class="sec-label">Testimoni</span>
+      <h2 class="sec-title">Mereka Sudah Merasakan Manfaatnya</h2>
+      <p class="sec-desc">Ribuan pelanggan setia SR12 dari seluruh Indonesia telah membuktikan kualitasnya.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="tc sr">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"Udah pakai Whitening Cream SR12 selama 3 minggu, hasilnya nyata banget! Kulit lebih cerah dan bekas jerawat makin samar. Harganya juga murah banget untuk kualitas segini."</p>
+        <div class="tc-user">
+          <div class="tc-avatar">👩</div>
+          <div>
+            <div class="tc-name">Siti Rahayu</div>
+            <div class="tc-loc">📍 Surabaya, Jawa Timur</div>
+            <span class="tc-prod">Whitening Cream SR12</span>
+          </div>
+        </div>
+      </div>
+      <div class="tc sr sr-d2">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"Facial Wash SR12 ini beneran the best! Kulit berminyak saya jadi lebih terkontrol dan bersih. Sudah repeat order yang ke-4 dan nggak mau ganti produk lain. Recommended!"</p>
+        <div class="tc-user">
+          <div class="tc-avatar">👩‍🦱</div>
+          <div>
+            <div class="tc-name">Dewi Anggraini</div>
+            <div class="tc-loc">📍 Jakarta Selatan</div>
+            <span class="tc-prod">Facial Wash Honey Extract</span>
+          </div>
+        </div>
+      </div>
+      <div class="tc sr sr-d3">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"Awalnya skeptis, tapi setelah coba DNA Salmon Serum langsung ketagihan! Kulit wajah saya jadi lebih lembab dan kenyal. Pelayanan penjualnya juga ramah dan fast response banget."</p>
+        <div class="tc-user">
+          <div class="tc-avatar">🧕</div>
+          <div>
+            <div class="tc-name">Fitria Handayani</div>
+            <div class="tc-loc">📍 Bandung, Jawa Barat</div>
+            <span class="tc-prod">DNA Salmon Serum SR12</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-inner sr">
+    <h2>Siap Tampil Cantik & Percaya Diri?</h2>
+    <p>Dapatkan kulit sehat, cerah, dan bercahaya bersama SR12 Herbal Skincare. Konsultasikan jenis kulitmu secara GRATIS sekarang!</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20konsultasi%20dan%20pesan%20SR12" class="btn-cta-wa" target="_blank">
+        💬 Chat & Konsultasi Gratis
+      </a>
+      <a href="#products" class="btn-cta-ghost">
+        📦 Lihat Katalog Produk
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="f-brand">SR<em>12</em></div>
+      <p class="f-desc">Official Reseller SR12 Herbal Skincare. Produk kecantikan & herbal asli Indonesia terdaftar BPOM, bebas mercury & hydroquinon. Melayani pengiriman ke seluruh Indonesia.</p>
+      <div class="f-socials">
+        <a href="#" class="fsoc" title="Instagram">📸</a>
+        <a href="#" class="fsoc" title="TikTok">🎵</a>
+        <a href="https://wa.me/6285815655325" class="fsoc" title="WhatsApp">💬</a>
+        <a href="#" class="fsoc" title="Facebook">📘</a>
+        <a href="#" class="fsoc" title="Shopee">🛒</a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="#products">Katalog Produk</a></li>
+        <li><a href="#why">Keunggulan SR12</a></li>
+        <li><a href="#order">Cara Pemesanan</a></li>
+        <li><a href="#ekspedisi">Info Pengiriman</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Kategori Produk</h4>
+      <ul>
+        <li><a href="#">Perawatan Wajah</a></li>
+        <li><a href="#">Sabun & Facial Wash</a></li>
+        <li><a href="#">Serum & Essence</a></li>
+        <li><a href="#">Perawatan Tubuh</a></li>
+        <li><a href="#">Herbal & Suplemen</a></li>
+        <li><a href="#">Makeup SR12</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Kontak Kami</h4>
+      <ul class="f-contact">
+        <li>📱 <a href="https://wa.me/6285815655325" style="color:rgba(255,255,255,.5)">+62 858-1565-5325</a></li>
+        <li>📍 Ponorogo, Jawa Timur</li>
+        <li>🕐 Senin–Sabtu, 08.00–21.00 WIB</li>
+        <li>✅ Respon < 1 Jam</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 SR12 Official Store · All Rights Reserved</span>
+    <span>Produk Herbal Asli Indonesia 🌿</span>
+  </div>
+</footer>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/6285815655325?text=Halo%2C%20saya%20mau%20pesan%20SR12" class="wa-fab" target="_blank">
+  <span class="wa-fab-tip">Pesan via WhatsApp 💬</span>
+  💬
+</a>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('up') });
+}, { threshold: 0.1 });
+document.querySelectorAll('.sr').forEach(el => observer.observe(el));
+
+// Nav hamburger (mobile)
+function toggleMenu(){
+  const links = document.querySelector('.nav-links');
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  links.style.flexDirection = 'column';
+  links.style.position = 'absolute';
+  links.style.top = '68px';
+  links.style.left = '0';
+  links.style.right = '0';
+  links.style.background = 'var(--cream)';
+  links.style.padding = '20px 5%';
+  links.style.borderBottom = '1px solid var(--border)';
+  links.style.zIndex = '99';
+  links.style.gap = '18px';
+}
+</script>
+</body>
+</html>
